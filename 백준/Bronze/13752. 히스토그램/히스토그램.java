@@ -5,15 +5,15 @@ public class Main{
 		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
         String input = br.readLine();
+        String answer = "";
         int num = 0;
-        String highpon = "";
         while((input = br.readLine()) != null){
             num = Integer.parseInt(input);
-            highpon = "";
+            answer = "";
             for(int i=0;i<num;i++){
-                highpon += "=";
+                answer += "=";
             }
-            bw.write(highpon+"\n");
+            bw.write(answer+"\n");
         }
         br.close();
         bw.flush();
