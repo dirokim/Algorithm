@@ -5,8 +5,8 @@ public class Main{
 		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
         String input = br.readLine();
-        int num = Integer.parseInt(br.readLine());
-        int num2 = Integer.parseInt(br.readLine());
+        Long num = Long.parseLong(br.readLine());
+        Long num2 = Long.parseLong(br.readLine());
         num = num * num2;
         bw.write(""+num);
         br.close();
