@@ -5,17 +5,29 @@ public class Main{
 		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
-        int num = Integer.parseInt(st.nextToken());
-        int num2 = Integer.parseInt(st.nextToken());
-        int num3 = Integer.parseInt(st.nextToken());
-        int answer = 0;
-        if(num <= num3){
-            answer += num3 - num;
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
+        int temp = 0;
+        if(b > a){
+            temp = b;
+            b = a;
+            a = temp;
         }
-        if(num2 <= num3){
-            answer += num3 - num2;
+        if(c > b){
+            temp = b;
+            b = c;
+            c = temp;
         }
-        bw.write(""+answer);
+        if(b > a){
+            temp = b;
+            b = a;
+            a = temp;
+        }
+        b = a - b;
+        c = a - c;
+        temp = b + c;
+        bw.write(""+temp);
         br.close();
         bw.flush();
         bw.close();
